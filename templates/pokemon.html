@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Pokemon</title>
+	<meta name="description" content="text clustering UI">
+	<meta name="author" content="wendy">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+	<script>
+		$(document).ready(function(){
+			var searchVal = '{{searchVal}}';
+			var name = '{{name}}';
+			var idNum = '{{idNum}}';
+
+			if(searchVal === 'id'){
+				$('h1').append("The pokemon with id " + idNum + " is " + name);
+			}
+			else{
+				name = name.charAt(0).toUpperCase() + name.substring(1);
+				$('h1').append(name + " has id " + idNum);
+			}
+		})
+	</script>
+
+	<h1>
+	</h1>
+</body>
+
+</html>
